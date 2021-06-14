@@ -1,11 +1,12 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
+import env from 'react-dotenv';
 
 const Map = ({ center, zoom }) => {
 	return (
-		<div className='w-screen h-screen relative'>
+		<div className='container relative h-screen w-1/2 mx-auto'>
 			<GoogleMapReact
-				bootstrapURLKeys={{ key: 'AIzaSyB2oXBKif1zXDjPvsoY_DmL3Th6xpCprJE' }}
+				bootstrapURLKeys={{ key: env.API_KEY }}
 				defaultCenter={center}
 				defaultZoom={zoom}></GoogleMapReact>
 		</div>
